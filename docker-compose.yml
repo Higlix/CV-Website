@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    image: nodejs/latest
+    ports:
+      - "3000:3000"
+    volumes:
+      # Mount the current directory to /app in container
+      - .:/home/node/app
+      # - node_modules:/home/node/app/node_modules
+
