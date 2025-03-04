@@ -20,7 +20,7 @@ COPY . .
 EXPOSE 3000
 
 # Configure the website
-RUN chmod +x ./configure.sh && bash configure.sh
+RUN chmod +x ./configure.sh && bash ./configure.sh
 
 # Set the entrypoint
-CMD ["./entrypoint.sh"]
+CMD ["/entrypoint.sh"]
