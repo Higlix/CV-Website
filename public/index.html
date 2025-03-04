@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erkron's Catalog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Erkron's Catalog</h1>
+        <nav>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="game-catalog">
+            <div id="ropez-game-card" class="game-card" data-game="ropez">
+                <img src="images/ropez/gamelogo.gif" alt="Ropez Logo">
+                <h2>Ropez</h2>
+                <p>Hyper casual rope cutting game.</p>
+            </div>
+            <div class="game-card">
+                <h2>Stond</h2>
+                <p>UNDER DEVELOPMENT.</p>
+            </div>
+            <!-- Additional game cards can be added here -->
+        </section>
+
+        <!-- Modal for game details -->
+        <div class="modal" id="gameModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Ropez</h2>
+                <p class="description">Ropez is a hyper casual mobile videogame. The objective of the game is to drop the ball in the basket. In order to make it into the basket, you cut the ropes and navigate the ball.</p>
+                <div class="screenshots">
+                    <img src="images/ropez/screenshot0.png" alt="Screenshot 1">
+                    <img src="images/ropez/screenshot1.png" alt="Screenshot 2">
+                    <img src="images/ropez/screenshot2.png" alt="Screenshot 3">
+                </div>
+                <div class="actions">
+                    <a href="#" class="btn">Play Now</a>
+                    <a href="#" class="platform-icon android"><i class="fab fa-android"></i></a>
+                    <a href="#" class="platform-icon ios"><i class="fab fa-apple"></i></a>
+                </div>
+                <p class="credits">Credits: </p>
+                <p class="credits">Developer : Erkron <a href="https://erkron.itch.io/">@erkron</a></p>
+                <p class="credits">UI & Game art : Nesim Baran Akbaş <a href="https://www.instagram.com/nesso2323/">@nesso2323</a></p>
+                <p class="credits">SFX : Erkron <a href="https://erkron.itch.io/">@erkron</a></p>
+                <p class="credits">Game & Level design : Erkron, Zeynep Akkurt</p>
+                
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const modal = document.getElementById('gameModal');
+        
+        const ropez = document.getElementById('ropez-game-card');
+        
+        const closeBtn = document.querySelector('.close');
+
+        ropez.addEventListener('click', () => {
+                modal.style.display = 'block';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
