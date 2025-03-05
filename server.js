@@ -12,7 +12,12 @@ app.get('/', (req, res) => {
 
 app.get('/app-ads.txt', (req, res) => {
 
-    res.send()
+    res.sendFile('public/app-ads.txt');
+});
+
+app.get('/privacy-policy.txt', (req, res) => {
+
+    res.sendFile('public/privacy-policy.txt');
 });
 
 // Include route files
