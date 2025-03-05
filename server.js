@@ -15,7 +15,7 @@ app.get('/app-ads.txt', (req, res) => {
     res.sendFile('public/app-ads.txt');
 });
 
-app.get('/privacy', (req, res) => {
+app.get('/privacy-policy.html', (req, res) => {
 
     res.sendFile('public/privacy-policy.html');
 });
